@@ -308,23 +308,17 @@ FindLUequivalent[tempGraph,randomNeighbour]]);
 
 userColor = Lighter@Gray;
 networkColor = White;
-thickness = Thickness[.005];
 
-CustomGraphStyle[graph_] := Graph[graph,
-  VertexStyle -> {
+CustomGraphStyle[graph_]:= Graph[graph, VertexStyle -> {
     1 -> Directive[EdgeForm[{Thick, Opacity[1], Black}], userColor],
     2 -> Directive[EdgeForm[{Thick, Opacity[1], Black}], userColor],
     5 -> Directive[EdgeForm[{Thick, Opacity[1], Black}], userColor],
     6 -> Directive[EdgeForm[{Thick, Opacity[1], Black}], userColor],
     4 -> Directive[EdgeForm[{Thick, Opacity[1], Black}], networkColor],
-    3 -> Directive[EdgeForm[{Thick, Opacity[1], Black}], 
-      networkColor]},
-  VertexLabelStyle -> 
-   Directive[Black, FontFamily -> "IBM Plex Sans", 25],
-  EdgeStyle -> Directive[Black, Thick, Opacity[1]],
-  (*VertexCoordinates\[Rule]{{3,2},{2,0},{3,4},{5,5},{1,3},{0,1}}*)
-  
-  GraphLayout -> "CircularEmbedding"];
+    3 -> Directive[EdgeForm[{Thick, Opacity[1], Black}], networkColor]},
+VertexLabelStyle -> Directive[Black, FontFamily -> "IBM Plex Serif", 25],
+EdgeStyle -> Directive[Black, Thick, Opacity[1]],
+GraphLayout -> "CircularEmbedding"];
 
 
 End[]
